@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_sunning"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".CityList">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,13 +28,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="thisCity1"
         android:paddingBottom="8dp">
 
         <ImageView
             android:id="@+id/imageView11"
             style="@style/style_image_hours"
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/ic_sunny" />
+            app:srcCompat="@drawable/ic_sunny2" />
 
         <TextView
             android:id="@+id/textView24"
@@ -41,17 +42,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="16dp"
-            android:text="Obninsk"
+            android:text="Обнинск"
             android:textSize="36sp" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="16dp"
+            android:paddingEnd="10dp"
             android:text="20\u00B0"
-            android:textAlignment="center"
+            android:textAlignment="textEnd"
             android:textSize="36sp" />
     </LinearLayout>
 
@@ -65,13 +65,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:onClick="thisCity2"
         android:paddingBottom="8dp">
 
         <ImageView
             android:id="@+id/imageView12"
             style="@style/style_image_hours"
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/ic_cloudy" />
+            app:srcCompat="@drawable/ic_cloudy2" />
 
         <TextView
             android:id="@+id/textView26"
@@ -79,16 +79,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="16dp"
-            android:text="Moskow"
+            android:text="Москва"
             android:textSize="36sp" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="20\u00B0"
-            android:textAlignment="center"
+            android:paddingEnd="10dp"
+            android:text="18\u00B0"
+            android:textAlignment="viewEnd"
             android:textSize="36sp" />
     </LinearLayout>
 
