@@ -2,6 +2,7 @@ package com.example.gardenweather;
 
 public class MemData {
     private String todayTemper;
+    private String currentCity;
 
     private MemData() {
     }
@@ -20,5 +21,13 @@ public class MemData {
 
     public void setTodayTemper(String todayTemper) {
         this.todayTemper = todayTemper;
+    }
+
+    public String getCurrentCity() {
+        return currentCity;
+    }
+
+    public void setCurrentCity(String currentCity) {
+        this.currentCity = currentCity;
     }
 }

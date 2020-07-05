@@ -19,7 +19,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:paddingStart="8dp"
-            android:text="Recommend a favorable landing time"
+            android:text="Рекомендовать время посадок"
             android:textSize="24sp" />
 
         <Switch
@@ -46,7 +46,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:paddingStart="8dp"
-            android:text="Show additional information"
+            android:text="Показывать дополнительную информацию"
             android:textSize="24sp" />
 
         <Switch
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:paddingStart="8dp"
-            android:text="Determine the location"
+            android:text="Определять место положение"
             android:textSize="24sp" />
 
         <Switch
