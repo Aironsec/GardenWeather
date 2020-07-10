@@ -3,35 +3,43 @@ package com.example.gardenweather;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements Sending{
+public class MainActivity extends AppCompatActivity implements Sending, PublisherGetter{
     private void mess(String... messages) {
         Toast.makeText(getApplicationContext(), messages[0], Toast.LENGTH_SHORT).show();
         Log.d(messages[1], messages[0]);
     }
 
+    private Publisher publisher = new Publisher();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView = findViewById(R.id.title_temp);
+
+        MainFragment mainFragment = new MainFragment();
+        publisher.subscribe(mainFragment);
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_main, mainFragment).commit();
+
+//        TextView textView = findViewById(R.id.title_temp);
         String state;
         if (savedInstanceState == null) {
             state = "Первый запуск onCreate";
-            textView.setText("29\u00B0");
+//            textView.setText("29\u00B0");
         } else {
             state = "Повторный запуск onCreate";
-            MemData memData = MemData.getInstance();
-            textView.setText(memData.getTodayTemper());
+//            MemData memData = MemData.getInstance();
+//            textView.setText(memData.getTodayTemper());
         }
 
         mess(state, "OnCreate");
@@ -116,9 +124,8 @@ public class MainActivity extends AppCompatActivity implements Sending{
         startActivity(intent);
     }
 
-    public void test2(View view) {
-        Uri uri = Uri.parse("https://yandex.ru/pogoda/obninsk");
-        Intent browser = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(browser);
+    @Override
+    public Publisher getPublisher() {
+        return publisher;
     }
 }
