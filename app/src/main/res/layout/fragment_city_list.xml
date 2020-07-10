@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_sunning"
     android:orientation="vertical"
-    tools:context=".CityList">
+    tools:context=".CityListFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,10 +24,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:onClick="thisCity1"
         android:paddingBottom="8dp">
 
         <ImageView
@@ -62,10 +61,10 @@
         android:background="?android:attr/listDivider" />
 
     <LinearLayout
+        android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:onClick="thisCity2"
         android:paddingBottom="8dp">
 
         <ImageView
