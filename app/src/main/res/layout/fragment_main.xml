@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none">
@@ -46,7 +45,6 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="list_cites"
                 android:selectAllOnFocus="false"
                 android:text="@string/city"
                 android:textAlignment="center"
@@ -68,7 +66,6 @@
                 android:id="@+id/title_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="test1"
                 android:text="@string/temperature_now"
                 android:textColor="@color/colorTempDey"
                 android:textSize="80sp" />
@@ -209,14 +206,14 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <fragment
-            android:id="@+id/fragment_liner_hours"
-            android:name="com.example.gardenweather.LinerHours"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            tools:layout="@layout/fragment_liner_hours" />
+            android:layout_marginBottom="8dp" />
+
 
         <CalendarView
             android:id="@+id/calendarView3"
